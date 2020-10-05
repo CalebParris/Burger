@@ -18,3 +18,11 @@ router.post("/api/burgers", function(req, res){
         res.json({ id: result.insertId });
     });
 });
+
+router.put("/api/burgers/:id", function(req, res){
+    burger.updateOne(["devoured", true], ["id", req.params.id], function(){
+        res.status(200).end();
+    });
+});
+
+module.exports = router;

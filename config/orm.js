@@ -15,9 +15,9 @@ const orm = {
             callback(result);
         });
     },
-    updateOne: function(tableName, valOne, valTwo, callback){
-        let query = "UPDATE ?? SET devoured = ? WHERE id = ?";
-        connection.query(query, [tableName, valOne, valTwo], function(err, result){
+    updateOne: function(tableName, colOne, valOne, colTwo, valTwo, callback){
+        let query = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
+        connection.query(query, [tableName, colOne, valOne, colTwo, valTwo], function(err, result){
             if (err) throw err;
             callback(result);
         });

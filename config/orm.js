@@ -8,9 +8,9 @@ const orm = {
             callback(result);
         });
     },
-    insertOne: function(tableName, colOne, colTwo, valOne, valTwo, callback){
-        let query = "INSERT INTO ?? ( ??, ?? ) VALUES ( ?, ? )";
-        connection.query(query, [tableName, colOne, colTwo, valOne, valTwo], function(err, result){
+    insertOne: function(tableName, col, val, callback){
+        let query = "INSERT INTO ?? ( ?? ) VALUES ( ? )";
+        connection.query(query, [tableName, col, val], function(err, result){
             if (err) throw err;
             callback(result);
         });

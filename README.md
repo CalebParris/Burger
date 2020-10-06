@@ -33,7 +33,7 @@
    ```
 
    ## License
-   The license assoiated with this project is MIT.
+   The license associated with this project is MIT.
    To view the license information, visit the link [here](https://github.com/CalebParris/Employee-Tracker/blob/master/LICENSE)
 
    ## Tests

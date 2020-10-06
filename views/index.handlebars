@@ -15,6 +15,18 @@
 
 <h2>Burgers that have been devoured:</h2>
 
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <li>
+        <p>
+            {{this.burger_name}}
+        </p>
+    </li>
+    {{/if}}
+    {{/each}}
+</ul>
+
 <h2>Add a new burger to be eaten:</h2>
 
 <form id="addBurger">

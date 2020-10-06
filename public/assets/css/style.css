@@ -1,0 +1,57 @@
+body{
+    background-image: url("../images/background_burger.jpg");
+    background-size: contain;
+    color: white;
+    font-size: 30px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "header header"
+    "uneaten devoured"
+    "new-burger new-burger";
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: auto;
+    font-size: 65px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+.uneaten{
+    grid-area: uneaten;
+    text-align: center;
+}
+
+.devoured{
+    grid-area: devoured;
+    text-align: center;
+}
+
+.new-burger{
+    grid-area: new-burger;
+    text-align: center;
+}
+
+.btn{
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+
+#burger_name{
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+}

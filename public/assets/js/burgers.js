@@ -1,5 +1,5 @@
 $(function(){
-    $(".add-burger").on("click", function(event){
+    $(".burger-btn").on("click", function(event){
         event.preventDefault();
     
         $.ajax("/api/burgers", {

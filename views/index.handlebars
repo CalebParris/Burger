@@ -1,12 +1,23 @@
 <h1>Eat-Da-Burger!</h1>
 
-<h2 id="toEat">Burgers that need to be eaten:</h2>
+<h2>Burgers that need to be eaten:</h2>
 
-<h2 id="devoured">Burgers that have been devoured:</h2>
+<ul>
+    {{#each burgers}}
+    <li>
+        <p>
+            {{this.burger_name}}
+            <button data-id="{{this.id}}" class="btn devour-btn">Devour it!</button>
+        </p>
+    </li>
+    {{/each}}
+</ul>
 
-<h2 id="newBurger">Add a new burger to be eaten:</h2>
+<h2>Burgers that have been devoured:</h2>
 
-<form id="burger-form">
-    <input type="text" id="new-burger-name" name="new-burger-name">
-    <button type="submit" class="btn newBurger-btn">Add New Burger</button>
+<h2>Add a new burger to be eaten:</h2>
+
+<form id="addBurger">
+    <input type="text" name="burger_name" placeholder="Enter New Burger">
+    <button type="submit" class="btn add-burger">Add New Burger</button>
 </form>

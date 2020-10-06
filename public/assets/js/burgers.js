@@ -13,4 +13,15 @@ $(function(){
             location.reload();
         });
     });
+
+    $(".devour-btn").on("click", function(){
+
+        $.ajax("/api/burgers/" + $(this).data("id"), {
+            type: "PUT",
+            data: { devoured: true }
+        }).then(function(){
+            console.log("Burger has been devoured");
+            location.reload();
+        });
+    });
 });

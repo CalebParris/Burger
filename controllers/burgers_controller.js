@@ -14,9 +14,13 @@ router.get("/", function(req, res){
 });
 
 router.post("/api/burgers", function(req, res){
-    burger.insertOne(["burger_name"], [req.body.burger_name], function(result){
-        res.json({ id: result.insertId });
-    });
+    if (req.body.burger_name !== "" && req.body.burger_name.length >= 1 || req.body.burger_name !== "" && req.body.burger_name.length <= 50){
+        burger.insertOne(["burger_name"], [req.body.burger_name], function(result){
+            res.json({ id: result.insertId });
+        });
+    } else {
+        res.status(404).send({ message: "Invalid input! Must be between 1 and 50 characters"}).end();
+    }
 });
 
 router.put("/api/burgers/:id", function(req, res){

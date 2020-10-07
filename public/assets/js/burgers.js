@@ -5,12 +5,17 @@ $(function(){
         $.ajax("/api/burgers", {
             type: "POST",
             data: {
-                burger_name: $("#burger_name").val(),
+                burger_name: $("#burger_name").val().trim(),
                 devoured: false
             }
         }).then(function(){
             console.log("New burger added");
             location.reload();
+        }).catch(function(err){
+            if (err){
+                console.log(err);
+                $("#error").removeClass("hidden");
+            }
         });
     });
 

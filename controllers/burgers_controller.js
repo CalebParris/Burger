@@ -1,8 +1,11 @@
+// Dependencies
 const express = require('express');
 const burger = require('../models/burger.js');
 
+// Variables
 const router = express.Router();
 
+// Main HTML page Route
 router.get("/", function(req, res){
     burger.selectAll(function(data){
         let hbsObject = {
@@ -13,6 +16,7 @@ router.get("/", function(req, res){
     });
 });
 
+// Route for adding new burgers
 router.post("/api/burgers", function(req, res){
     if (req.body.burger_name !== ""){
         burger.insertOne(["burger_name"], [req.body.burger_name], function(result){
@@ -23,6 +27,7 @@ router.post("/api/burgers", function(req, res){
     }
 });
 
+// Route for updating burgers that have been devoured
 router.put("/api/burgers/:id", function(req, res){
     burger.updateOne("devoured", true, "id", req.params.id, function(){
         res.status(200).end();

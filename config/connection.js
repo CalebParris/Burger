@@ -1,9 +1,14 @@
+// Dependencies
 const mysql = require('mysql');
+
+// Variables
 let connection;
 
 if (process.env.JAWSDB_URL){
+    // Heroku deployment database
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
+    // Localhost database
     connection = mysql.createConnection({
         host: "localhost",
         port: 3306,

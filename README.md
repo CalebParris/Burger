@@ -34,7 +34,7 @@
 
    ## License
    The license associated with this project is MIT.
-   To view the license information, visit the link [here](https://github.com/CalebParris/Employee-Tracker/blob/master/LICENSE)
+   To view the license information, visit the link [here](https://github.com/CalebParris/Burger/blob/master/LICENSE)
 
    ## Tests
    To test the app, follow the directions from the Installation and Usage sections first. After that, you can use the app as follows:
